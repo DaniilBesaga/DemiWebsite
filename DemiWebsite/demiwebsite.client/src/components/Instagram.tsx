@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styles/Instagram.css';
 import '../styles/Shared.css';
 

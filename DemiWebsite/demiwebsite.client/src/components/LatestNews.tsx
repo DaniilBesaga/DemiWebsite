@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styles/LatestNews.css';
 import '../styles/Shared.css';
 
