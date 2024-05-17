@@ -1,0 +1,32 @@
+.latest-news{
+    padding:30px;
+}
+
+.latest-news h2{
+
+}
+
+.latest-news .news{
+    padding:30px 0;
+    border-bottom:2px solid black;
+    display:block;
+    margin-right:30%;
+}
+
+.latest-news .news > p{
+    display:inline-block;
+    margin-right:30px;
+    text-align:start;
+    position:relative;
+    top:-15px;
+}
+
+.latest-news .news > div{
+    display:inline-block;
+}
+
+.latest-news .proceed-button{
+    float:right;
+    margin-top:20px;
+    margin-right:30%;
+}
