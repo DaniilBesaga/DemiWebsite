@@ -3,7 +3,7 @@ import '../styles/LatestNews.css';
 import '../styles/Shared.css';
 
 
-function TrailersGrid() {
+function LatestNews() {
 
 
     return (
@@ -35,4 +35,4 @@ const news_title = ['fqefqefqefeqffqe', 'fqfadfadfadfadfadffad', 'fadfadfadffadf
 const news_desc = ['fqefqefdafaaaaaaaeqffqe', 'fgfgfhjjkhjhhjhj', 'reqreqreqreqrrrqreq',
     'cxcadvdfadvvfbfbfbf', 'rtrytyutertyyruuoiuytr']
 
-export default TrailersGrid;
+export default LatestNews;
