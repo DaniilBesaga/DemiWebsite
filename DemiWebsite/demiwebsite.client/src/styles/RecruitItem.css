@@ -1,0 +1,38 @@
+.recruit-item {
+    background-image: url(https://profirealt.blob.core.windows.net/commerce/recruit/recruit1.jpg);
+    border-radius:10px;
+    padding-top:55%;
+    margin-top:30px;
+    text-align:center;
+    background-repeat:no-repeat;
+}
+
+.recruit-item h2{
+    color:white;
+    font-size:2.25em;
+}
+
+.recruit-item p{
+    color:white;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.recruit-item a{
+    padding:12px 17px;
+    border-radius:50px;
+    margin:10px 30%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+    color:white;
+    display:block;
+}
+
+.recruit-item i{
+    left:45px;
+    position:relative;
+}
+
+.recruit-item a:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
