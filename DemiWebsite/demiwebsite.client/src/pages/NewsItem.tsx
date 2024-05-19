@@ -1,22 +1,20 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import NewsPreview from '../components/NewsPreview';
 import MonthlyArchive from '../components/MonthlyArchive';
-import ButtonsList from '../components/ButtonsList';
+import NewsInfo from '../components/NewsInfo';
 
-function News() {
+function NewsItem() {
     return (
         <div>
             <Header />
-            <div className="container">
-                <h2 className="h-red">news list</h2>
-                <NewsPreview />
+            <div className="news-item container">
+                <h2 className="h-red">news</h2>
                 <MonthlyArchive />
+                <NewsInfo/>
             </div>
-            <ButtonsList/>
             <Footer />
         </div>
     )
 }
 
-export default News;
+export default NewsItem;
