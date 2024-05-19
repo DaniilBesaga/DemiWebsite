@@ -6,7 +6,7 @@ function Company() {
     return (
         <div>
             <Header />
-            <div className="company">
+            <div className="container">
                 <CompanyWelcome />
                 <div>
                     <h2 className="h-red">Map</h2>
