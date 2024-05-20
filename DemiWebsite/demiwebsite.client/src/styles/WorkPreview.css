@@ -20,6 +20,27 @@
     margin-bottom:20px;
 }
 
+.work-preview div{
+    background: rgba(0, 0, 0, 0.5);
+    padding:5px 10px;
+    padding-top:20px;
+    text-align:center;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    width: 22.5%;
+    position: absolute;
+    color:white;
+    bottom: 40px; 
+}
+
+.show-title {
+    opacity: 1 !important;
+    height: 60px !important;
+    transition: all .6s ease-in-out !important;
+}
+
 .work-preview span{
     font-size:.8em;
 }

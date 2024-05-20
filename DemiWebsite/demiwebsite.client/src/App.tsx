@@ -5,10 +5,11 @@ import News from './pages/News';
 import NewsItem from './pages/NewsItem';
 import Recruit from './pages/Recruit';
 import Works from './pages/Works';
+import WorkItem from './components/WorkItem';
 
 function App() {
     return (
-        <Works />
+        <WorkItem />
     )
 }
 
