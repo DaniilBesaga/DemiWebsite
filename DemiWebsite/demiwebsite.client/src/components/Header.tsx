@@ -9,11 +9,11 @@ function Header() {
                 <span>Demi.to</span>
             </a>
             <ul className="header-nav">
-                <li><a >Company</a></li>
-                <li><a >Works</a></li>
-                <li><a >News</a></li>
-                <li><a >Recruit</a></li>
-                <li><a >Message</a></li>
+                <li><Link to="/company">Company</Link></li>
+                <li><Link to="/works">Works</Link></li>
+                <li><Link to="/news">News</Link></li>
+                <li><Link to="/recruit">Recruit</Link></li>
+                <li><Link to="/message">Message</Link></li>
             </ul>
             <div className="header-langs">
                 <span>укр</span>

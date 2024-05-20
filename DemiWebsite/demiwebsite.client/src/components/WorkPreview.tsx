@@ -1,6 +1,7 @@
 import '../styles/WorkPreview.css';
 import '../styles/Shared.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function WorkPreview() {
@@ -8,7 +9,7 @@ function WorkPreview() {
     const [showList, setShowList] = useState(false);
 
     return (
-        <a className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
+        <Link to="/work/1" className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
             <img src="https://profirealt.blob.core.windows.net/commerce/works/work1.png" />
             <div className={showList ? 'show-title' : ''}>
                 This is what happened
@@ -16,7 +17,7 @@ function WorkPreview() {
             <h3>This is what happened</h3>
             <span>2024.01</span>
             
-        </a>
+        </Link>
     )
 }
 

@@ -1,5 +1,16 @@
+.news:hover {
+    cursor: pointer;
+    background: #ebdddd;
+    transition: all .7s ease;
+}
+
 .latest-news{
     padding:30px;
+    
+}
+
+.news *{
+    color:black;
 }
 
 .latest-news h2{

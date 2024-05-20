@@ -8,7 +8,7 @@ function Works() {
         <div>
             <Header />
             <div className="container">
-                <h2 className="h-red" style={{ fontSize: '2.25em' }}>recruit</h2>
+                <h2 className="h-red" style={{ fontSize: '2.25em' }}>works</h2>
                 <div className="works-container">
                     <WorkPreview />
                     <WorkPreview />

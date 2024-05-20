@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/Instagram.css';
 import '../styles/Shared.css';
 
@@ -16,7 +17,7 @@ function Instagram() {
                 <a href="https://www.instagram.com/nikaman.edits/"><img src="https://profirealt.blob.core.windows.net/commerce/vivi.jpg" /></a>
             </div>
             <div className="proceed-button">
-                <a>Follow</a>
+                <Link to="https://www.instagram.com/nikaman.edits/">Follow</Link>
                 <i className="ri-arrow-right-wide-line"></i>
             </div>
         </div>

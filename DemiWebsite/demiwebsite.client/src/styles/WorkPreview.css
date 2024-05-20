@@ -1,5 +1,6 @@
 .work-preview {
     text-align: center;
+    text-decoration-color:black !important;
 }
 
 .work-preview:hover {
@@ -43,6 +44,7 @@
 
 .work-preview span{
     font-size:.8em;
+    color:black;
 }
 
 .works-container {

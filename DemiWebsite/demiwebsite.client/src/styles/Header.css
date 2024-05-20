@@ -46,7 +46,10 @@ header .header-nav li{
     font-size:14px;
     cursor:pointer;
     border-bottom:2px solid transparent;
-    transition:all .8s ease;
+}
+
+header .header-nav a{
+    color:black;
 }
 
 header .header-nav li:hover{
