@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/Footer.css';
 import '../styles/Shared.css';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -13,9 +14,9 @@ function Footer() {
                 <a href="twitter.com"><i className="ri-twitter-line"></i></a>
             </div>
             <ul>
-                <li><a>Use of the site</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Inquiry</a></li>
+                <li><Link to="/siteusing">Use of the site</Link></li>
+                <li><Link to="/policy">Privacy policy</Link></li>
+                <li><Link to="/contact">Inquiry</Link></li>
             </ul>
         </footer>
     )

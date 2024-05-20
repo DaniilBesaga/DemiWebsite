@@ -2,7 +2,7 @@
 import Footer from '../components/Footer';
 import '../styles/WorkItem.css';
 
-function Works() {
+function WorkItem() {
     return (
         <div>
             <Header />
@@ -42,4 +42,4 @@ function Works() {
     )
 }
 
-export default Works;
+export default WorkItem;

@@ -1,7 +1,5 @@
 import '../styles/NewsPreview.css';
 import '../styles/Shared.css';
-import MonthlyArchive from './MonthlyArchive';
-
 
 function NewsPreview() {
     return (

@@ -8,6 +8,9 @@ import Works from './pages/Works';
 import WorkItem from './components/WorkItem';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import UseOfTheSite from './pages/UseOfTheSite';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -21,6 +24,9 @@ function App() {
                 <Route path="/recruit" element={<Recruit />} />
                 <Route path="/works" element={<Works />} />
                 <Route path="/works/:id" element={<WorkItem />} />
+                <Route path="/policy" element={<PrivacyPolicy />} />
+                <Route path="/siteusing" element={<UseOfTheSite />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </BrowserRouter>
     )

@@ -1,19 +1,21 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import RecruitItem from '../components/RecruitItem';
 import '../styles/Recruit.css';
+import ContactItem from '../components/ContactItem';
 
-function Recruit() {
+function Contact() {
     return (
         <div>
             <Header />
             <div className="container">
                 <h2 className="h-red" style={{ fontSize: '2.25em' }}>recruit</h2>
-                <div className="recruit-container grid-2">
-                    <RecruitItem />
-                    <RecruitItem />
-                    <RecruitItem />
-                    <RecruitItem />
+                <div className="contact-container grid-2">
+                    <ContactItem />
+                    <ContactItem />
+                    <ContactItem />
+                    <ContactItem />
+                    <ContactItem />
+                    <ContactItem />
                 </div>
             </div>
             <Footer />
@@ -21,4 +23,4 @@ function Recruit() {
     )
 }
 
-export default Recruit;
+export default Contact;

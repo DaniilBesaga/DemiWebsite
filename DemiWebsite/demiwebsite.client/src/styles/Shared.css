@@ -33,3 +33,23 @@
     color: red;
     border-radius:4px;
 }
+
+.copyright {
+    margin-top: 20px;
+}
+
+.copyright h3 {
+    color: red;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.copyright p, .copyright li {
+    font-size: .9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
