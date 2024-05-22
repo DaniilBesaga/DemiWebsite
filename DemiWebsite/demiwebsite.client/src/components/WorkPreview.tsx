@@ -2,20 +2,21 @@ import '../styles/WorkPreview.css';
 import '../styles/Shared.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IWorkItemPreview } from '../interfaces/Interfaces';
 
 
-function WorkPreview() {
+function WorkPreview(work: IWorkItemPreview) {
 
     const [showList, setShowList] = useState(false);
 
     return (
-        <Link to="/work/1" className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
-            <img src="https://profirealt.blob.core.windows.net/commerce/works/work1.png" />
+        <Link to={"work" + work.id} className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
+            <img src={work.imgUrl} />
             <div className={showList ? 'show-title' : ''}>
-                This is what happened
+                {work.name}
             </div>
-            <h3>This is what happened</h3>
-            <span>2024.01</span>
+            <h3>{work.name}</h3>
+            <span>{work.releaseDate?.toString()}</span>
             
         </Link>
     )

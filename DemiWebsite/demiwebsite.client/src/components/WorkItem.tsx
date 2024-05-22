@@ -1,8 +1,21 @@
 ﻿import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/WorkItem.css';
+import { IWorkItem } from '../interfaces/Interfaces';
+import { useEffect, useState } from 'react';
 
 function WorkItem() {
+
+    const [work, setWork] = useState<IWorkItem>(undefined!);
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch(`/api/works/${window.location.href.split("/")[1]}`);
+            const data = await response.json();
+            setWork(data);
+        })();
+    }, [])
+
     return (
         <div>
             <Header />
@@ -10,13 +23,13 @@ function WorkItem() {
                 <h2 className="h-red" style={{ fontSize: '2.25em' }}>works</h2>
                 <div className="work-container">
                     <div className="work-visual">
-                        <img src="https://profirealt.blob.core.windows.net/commerce/works/work1.png" />
-                        <iframe src="https://www.youtube.com/embed/ITFklIWu0Wg?si=ZLcprjaYwdGH91K7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <img src={work.img_url} />
+                        <iframe src={work.trailer_url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                     <div className="work-detail">
                         <div className="work-detail-meta">
-                            <span>2024.01.01</span>
-                            <h2>This is what happened</h2>
+                            <span>{work.release_date.toString()}</span>
+                            <h2>{work.work_name}</h2>
                         </div>
                         <div className="work-detail-story">
                             <h5>Story</h5>

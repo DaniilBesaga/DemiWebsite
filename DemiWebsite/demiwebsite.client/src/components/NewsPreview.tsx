@@ -1,18 +1,30 @@
 import '../styles/NewsPreview.css';
 import '../styles/Shared.css';
+import { NewsItem } from '../interfaces/Interfaces';
+import { useEffect, useState } from 'react';
 
 function NewsPreview() {
+
+    const [news, setNews] = useState<NewsItem[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch('/api/news');
+            const data = await response.json();
+            setNews(data);
+        })();
+    }, [])
+
     return (
-        arr.map((index, key) => (
+        news.map((item, key) => (
             <div className="news-preview">
                 <a className="news-p-img">
-                    <img src="https://profirealt.blob.core.windows.net/commerce/company_logo.png" />
+                    <img src={item.imgUrl} />
                 </a>
-                <span className="date">2024.01.01</span>
+                <span className="date">{item.postDate?.toString()}</span>
                 <div className="news-p-info">
-                    <h3><a>Demi Studio is looking for mid-career production assistant positions in
-                        conjunction with the launch of a new project</a></h3>
-                    <p>Application period: Monday, May 13, 2024 - Friday, May 31, 2024 (must arrive by June)feqfqefqefqe</p>
+                    <h3><a>{item.name}</a></h3>
+                    <p>{item.description}</p>
                     <a className="a-button">Find out more</a>
                 </div>
                 
@@ -21,7 +33,5 @@ function NewsPreview() {
         ))
     )
 }
-
-const arr = [1,2,3,4,5]
 
 export default NewsPreview;

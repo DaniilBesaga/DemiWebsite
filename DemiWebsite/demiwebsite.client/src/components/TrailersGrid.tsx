@@ -1,7 +1,19 @@
 import '../styles/TrailersGrid.css';
+import { IWorkItemPreview } from '../interfaces/Interfaces';
+import { useEffect, useState } from 'react';
 
 
 function TrailersGrid() {
+
+    const [workPreview, setWorkPreview] = useState<IWorkItemPreview[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch('/api/work/preview');
+            const data = await response.json();
+            setWorkPreview(data);
+        })();
+    }, [])
 
     
     return (
@@ -15,10 +27,10 @@ function TrailersGrid() {
                 ))}
             </div>
             <div className="grid-3">
-                {tnames.map((item, key) => (
+                {workPreview.map((item, key) => (
                     <a key={key}>
-                        <img src={trailers[0]} alt={item} />
-                        <p>{item}</p>
+                        <img src={item.imgUrl}/>
+                        <p>{item.name}</p>
                     </a>
                 ))}
             </div>

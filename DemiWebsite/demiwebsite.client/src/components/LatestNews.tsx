@@ -1,21 +1,32 @@
 import { Link } from 'react-router-dom';
 import '../styles/LatestNews.css';
 import '../styles/Shared.css';
+import { useEffect, useState } from 'react';
+import { NewsItem } from '../interfaces/Interfaces';
 
 
 function LatestNews() {
 
+    const [latestNews, setLatestNews] = useState<NewsItem[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch('/api/news');
+            const data = await response.json();
+            setLatestNews(data);
+        })();
+    }, [])
 
     return (
         <div className="latest-news">
             <h2 className="h-red">latest news</h2>
             <div>
-                {news_title.map((item, key) => (
+                {latestNews.map((item, key) => (
                     <Link to={"news/" + key} className="news" key={key}>
-                        <p>2024.01.01</p>
+                        <p>{item.postDate.toString()}</p>
                         <div>
-                            <p style={{ color: 'red', fontSize: 23, fontWeight: 'bold' }}>{item}</p>
-                            <p>{news_desc[key]}</p>
+                            <p style={{ color: 'red', fontSize: 23, fontWeight: 'bold' }}>{item.name}</p>
+                            <p>{item.description}</p>
                         </div>
                     </Link>
                 ))}
@@ -27,12 +38,5 @@ function LatestNews() {
         </div>
     )
 }
-
-
-const news_title = ['fqefqefqefeqffqe', 'fqfadfadfadfadfadffad', 'fadfadfadffadfadfdaf',
-'fdfdfsgsfdggfsgfsg', 'gfsgfsgsgfgsgfgsfgsgffgsf']
-
-const news_desc = ['fqefqefdafaaaaaaaeqffqe', 'fgfgfhjjkhjhhjhj', 'reqreqreqreqrrrqreq',
-    'cxcadvdfadvvfbfbfbf', 'rtrytyutertyyruuoiuytr']
 
 export default LatestNews;
