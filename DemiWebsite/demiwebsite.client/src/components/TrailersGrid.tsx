@@ -1,6 +1,7 @@
 import '../styles/TrailersGrid.css';
 import { IWorkItemPreview } from '../interfaces/Interfaces';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function TrailersGrid() {
@@ -19,18 +20,19 @@ function TrailersGrid() {
     return (
         <div className="trailers-container">
             <div className="grid-6">
-                {names.map((item, key) => (
-                    <a key={key}>
-                        <img src={trailers[0]} alt={item} />
-                        <p>{item}</p>
-                    </a>
+                {workPreview.map((item, key) => (
+                    <Link key={key} to={"work/" + (key + 1)}>
+                        <img src={item.imgUrl} />
+                        <p>{item.name}</p>
+                    </Link>
                 ))}
             </div>
             <div className="grid-3">
-                {workPreview.map((item, key) => (
+                
+                {tnames.map((item, key) => (
                     <a key={key}>
-                        <img src={item.imgUrl}/>
-                        <p>{item.name}</p>
+                        <img src={trailers[0]} alt={item} />
+                        <p>{item}</p>
                     </a>
                 ))}
             </div>

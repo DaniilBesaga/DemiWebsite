@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DemiWebsite.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19588e19670d1ec675f01ea9df7038def13c2a86")]
 [assembly: System.Reflection.AssemblyProductAttribute("DemiWebsite.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DemiWebsite.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

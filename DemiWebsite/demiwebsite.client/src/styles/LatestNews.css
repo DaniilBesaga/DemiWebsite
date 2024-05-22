@@ -20,7 +20,8 @@
 .latest-news .news{
     padding:30px 0;
     border-bottom:2px solid black;
-    display:block;
+    display:flex;
+    flex-direction:row;
     margin-right:30%;
 }
 
@@ -29,11 +30,19 @@
     margin-right:30px;
     text-align:start;
     position:relative;
-    top:-15px;
+    top:15px;
+    width:10%;
 }
 
-.latest-news .news > div{
-    display:inline-block;
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.latest-news .news > div {
+    display: inline-block;
+    width:80%;
 }
 
 .latest-news .proceed-button{

@@ -5,8 +5,8 @@ namespace DemiWebsite.Server.Models
 {
     public class NewsItem
     {
-        [Required]
         [Key]
+        [Required]
         [Column("news_id")]
         public int Id { get; set; }
 

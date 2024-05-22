@@ -22,11 +22,11 @@ function LatestNews() {
             <h2 className="h-red">latest news</h2>
             <div>
                 {latestNews.map((item, key) => (
-                    <Link to={"news/" + key} className="news" key={key}>
-                        <p>{item.postDate.toString()}</p>
+                    <Link to={"news/" + (key+1)} className="news" key={key}>
+                        <p>{item.postDate?.toString().substring(0, 10)}</p>
                         <div>
                             <p style={{ color: 'red', fontSize: 23, fontWeight: 'bold' }}>{item.name}</p>
-                            <p>{item.description}</p>
+                            <p className="description">{item.description}</p>
                         </div>
                     </Link>
                 ))}

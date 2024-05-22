@@ -12,6 +12,7 @@
 
 :is(.trailers-container .grid-6, .trailers-container) a {
     width: 100%;
+    color:black;
 }
 
 :is(.trailers-container .grid-6, .trailers-container) img {

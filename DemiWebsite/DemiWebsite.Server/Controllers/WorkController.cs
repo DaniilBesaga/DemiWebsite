@@ -27,7 +27,7 @@ namespace DemiWebsite.Server.Controllers
             }
         }
 
-        [HttpGet("/preview")]
+        [HttpGet("preview")]
         public async Task<ActionResult> GetWorksPreview()
         {
             try
