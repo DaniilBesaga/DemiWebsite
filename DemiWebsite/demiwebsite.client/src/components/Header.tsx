@@ -13,7 +13,7 @@ function Header() {
                 <li><Link to="/works">Works</Link></li>
                 <li><Link to="/news">News</Link></li>
                 <li><Link to="/recruit">Recruit</Link></li>
-                <li><Link to="/message">Message</Link></li>
+                <li><Link to="/contact">Message</Link></li>
             </ul>
             <div className="header-langs">
                 <span>укр</span>

@@ -1,6 +1,7 @@
 .work-preview {
     text-align: center;
     text-decoration-color:black !important;
+    position:relative;
 }
 
 .work-preview:hover {
@@ -30,10 +31,10 @@
     height: 0;
     overflow: hidden;
     transition: all .6s ease-in-out;
-    width: 22.5%;
+    width:100%;
     position: absolute;
     color:white;
-    bottom: 40px; 
+    bottom:80px;
 }
 
 .show-title {

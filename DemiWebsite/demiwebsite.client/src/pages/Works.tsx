@@ -11,7 +11,7 @@ function Works() {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch('/api/works/');
+            const response = await fetch('/api/work');
             const data = await response.json();
             setWorksPreview(data);
         })();

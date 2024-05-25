@@ -1,9 +1,9 @@
 export interface IWorkItem {
-    work_id: number;
-    work_name: string;
-    release_date: Date;
-    img_url: string;
-    trailer_url: string;
+    id: number;
+    name: string;
+    releaseDate: Date;
+    imgUrl: string;
+    trailerUrl: string;
     story: string;
 }
 

@@ -1,7 +1,10 @@
 .recruit-item {
-    background-image: url(https://profirealt.blob.core.windows.net/commerce/recruit/recruit1.jpg);
+    background-image: url();
+    
+    background-size:auto 500px;
+    background-position:center;
     border-radius:10px;
-    padding-top:55%;
+    padding:100px;
     margin-top:30px;
     text-align:center;
     background-repeat:no-repeat;

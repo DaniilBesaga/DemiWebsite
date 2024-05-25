@@ -8,15 +8,14 @@ import { IWorkItemPreview } from '../interfaces/Interfaces';
 function WorkPreview(work: IWorkItemPreview) {
 
     const [showList, setShowList] = useState(false);
-
     return (
-        <Link to={"work" + work.id} className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
+        <Link to={"" + work.id} className="work-preview" onMouseEnter={() => setShowList(true)} onMouseLeave={() => setShowList(false)}>
             <img src={work.imgUrl} />
             <div className={showList ? 'show-title' : ''}>
                 {work.name}
             </div>
             <h3>{work.name}</h3>
-            <span>{work.releaseDate?.toString()}</span>
+            <span>{work.releaseDate?.toString().substring(0, 10)}</span>
             
         </Link>
     )

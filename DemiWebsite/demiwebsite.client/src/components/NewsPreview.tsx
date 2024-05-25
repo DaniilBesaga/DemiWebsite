@@ -2,6 +2,7 @@ import '../styles/NewsPreview.css';
 import '../styles/Shared.css';
 import { NewsItem } from '../interfaces/Interfaces';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function NewsPreview() {
 
@@ -18,14 +19,14 @@ function NewsPreview() {
     return (
         news.map((item, key) => (
             <div className="news-preview">
-                <a className="news-p-img">
+                <Link to={""+(key+1)} className="news-p-img">
                     <img src={item.imgUrl} />
-                </a>
-                <span className="date">{item.postDate?.toString()}</span>
+                </Link>
+                <span className="date">{item.postDate?.toString().substring(0, 10)}</span>
                 <div className="news-p-info">
-                    <h3><a>{item.name}</a></h3>
+                    <h3><Link to={"" + (key + 1)}>{item.name}</Link></h3>
                     <p>{item.description}</p>
-                    <a className="a-button">Find out more</a>
+                    <Link to={""+(key + 1)} className="a-button">Find out more</Link>
                 </div>
                 
             </div>

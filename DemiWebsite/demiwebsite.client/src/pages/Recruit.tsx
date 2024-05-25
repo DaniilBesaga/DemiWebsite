@@ -10,10 +10,10 @@ function Recruit() {
             <div className="container">
                 <h2 className="h-red" style={{ fontSize: '2.25em' }}>recruit</h2>
                 <div className="recruit-container grid-2">
-                    <RecruitItem />
-                    <RecruitItem />
-                    <RecruitItem />
-                    <RecruitItem />
+                    <RecruitItem url="https://profirealt.blob.core.windows.net/commerce/recruit/recruit1.jpg" />
+                    <RecruitItem url="https://profirealt.blob.core.windows.net/commerce/recruit/recruit2.jpg" />
+                    <RecruitItem url="https://profirealt.blob.core.windows.net/commerce/recruit/recruit6.webp" />
+                    <RecruitItem url="https://profirealt.blob.core.windows.net/commerce/recruit/recruit4.webp" />
                 </div>
             </div>
             <Footer />
