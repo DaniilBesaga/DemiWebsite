@@ -19,7 +19,7 @@ function App() {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/company" element={<Company />} />
                 <Route path="/news" element={<News />} />
-                <Route path="/news/page_:id" element={<News />} />
+                <Route path="/news/:month" element={<News />} />
                 <Route path="/news/:id" element={<NewsItem />} />
                 <Route path="/recruit" element={<Recruit />} />
                 <Route path="/works" element={<Works />} />

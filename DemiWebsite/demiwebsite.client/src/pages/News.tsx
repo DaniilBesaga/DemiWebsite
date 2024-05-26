@@ -9,7 +9,8 @@ function News() {
         <div>
             <Header />
             <div className="container">
-                <h2 className="h-red">news list</h2>
+                <h2 className="h-red">{window.location.href.includes("0") ? 'news list:' +
+                    window.location.pathname.split('/')[2] : 'news list'}</h2>
                 <NewsPreview />
                 <MonthlyArchive />
             </div>

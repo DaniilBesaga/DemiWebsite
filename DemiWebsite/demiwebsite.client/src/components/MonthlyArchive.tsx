@@ -1,26 +1,38 @@
 import { useState } from 'react';
 import '../styles/MonthlyArchive.css';
 import '../styles/Shared.css';
+import { Link } from 'react-router-dom';
 
 
 function MonthlyArchive() {
 
     const [showList, setShowList] = useState(false);
+    const [changeMonth, setChangeMonth] = useState(0);
+    const [showMonth, setShowMonth] = useState(false);
+    const year = new Date().getFullYear();
 
+    const handleHover = (month: number) => {
+        setChangeMonth(month + 1);
+        setShowMonth(true);
+    }
+   
     return (
-        <div className="archive">
-            <h3 className="h-red">Monthly archive</h3>
-            <div onClick={() => setShowList(!showList)}>
-                <span>2024</span>
-                <i className="ri-arrow-down-s-line"></i>
+        <div>
+            <span className={showMonth ? "url-title url-show" : "url-title"}>{window.location.hostname + `/news/${year}-0${changeMonth + 1}`}</span>
+            <div className="archive">
+                <h3 className="h-red">Monthly archive</h3>
+                <div onClick={() => setShowList(!showList)}>
+                    <span>2024</span>
+                    <i className="ri-arrow-down-s-line"></i>
+                </div>
+                <ul className={showList ? 'show' : ''}>
+                    {month.map((index, key) => (
+                        key <= currentMonth ? <li key={key}><a href={`/news/${year}-0${key + 1}`}>{index} 2024</a></li> : null
+
+                    ))}
+
+                </ul>
             </div>
-            <ul className={showList? 'show' : ''}>
-                {month.map((index, key) => (
-                    key <= currentMonth ? <li key={key}><a>{index} 2024</a></li> : null
-
-                ))}
-
-            </ul>
         </div>
     )
 }

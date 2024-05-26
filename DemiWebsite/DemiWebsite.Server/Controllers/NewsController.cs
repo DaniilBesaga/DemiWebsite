@@ -27,6 +27,20 @@ namespace DemiWebsite.Server.Controllers
             }
         }
 
+        [HttpGet("month/{month:int}")]
+        public async Task<ActionResult> GetNewsByMonth(int Month)
+        {
+            try
+            {
+                var news = await _newsRepository.GetAllAsync();
+                return Ok(news.Where(x=>x.PostDate.Month == Month));
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult> GetNewsById(int id)
         {
