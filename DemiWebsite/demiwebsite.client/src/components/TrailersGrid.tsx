@@ -9,11 +9,11 @@ function TrailersGrid() {
     const [workPreview, setWorkPreview] = useState<IWorkItemPreview[]>([]);
 
     useEffect(() => {
-        (async () => {
+        setTimeout(async () => {
             const response = await fetch('/api/work/preview');
             const data = await response.json();
             setWorkPreview(data);
-        })();
+        }, 1000);
     }, [])
 
     
@@ -28,10 +28,10 @@ function TrailersGrid() {
                 ))}
             </div>
             <div className="grid-3">
-                
+
                 {tnames.map((item, key) => (
                     <a key={key}>
-                        <img src={trailers[0]} alt={item} />
+                        <img src={trailers[key]} alt={item} />
                         <p>{item}</p>
                     </a>
                 ))}
@@ -40,9 +40,10 @@ function TrailersGrid() {
     )
 }
 
-const trailers = ['https://profirealt.blob.core.windows.net/commerce/anime1.png']
-const names = ['Spy Family', 'One Piece', 'Dragon Ball', 'Tokyo Revengers', 'Your name', 'Pivasik']
+const trailers = ['https://profirealt.blob.core.windows.net/commerce/anime1.png',
+    'https://profirealt.blob.core.windows.net/commerce/anime2.png',
+    'https://profirealt.blob.core.windows.net/commerce/anime3.jpg']
 
-const tnames = ['One Piece: Red', 'Code Geass: Alian', 'Pivasik: New Adventure']
+const tnames = ['One Piece: Red', 'Code Geass: Alian', 'Hlebushek: New Adventure']
 
 export default TrailersGrid;

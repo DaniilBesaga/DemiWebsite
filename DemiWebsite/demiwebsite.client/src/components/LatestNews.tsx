@@ -8,13 +8,12 @@ import { NewsItem } from '../interfaces/Interfaces';
 function LatestNews() {
 
     const [latestNews, setLatestNews] = useState<NewsItem[]>([]);
-
     useEffect(() => {
-        (async () => {
+        setTimeout(async () => {
             const response = await fetch('/api/news');
             const data = await response.json();
             setLatestNews(data);
-        })();
+        }, 1000);
     }, [])
 
     return (

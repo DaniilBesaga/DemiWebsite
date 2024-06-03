@@ -11,6 +11,7 @@ import MainPage from './pages/MainPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import UseOfTheSite from './pages/UseOfTheSite';
 import Contact from './pages/Contact';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/policy" element={<PrivacyPolicy />} />
                 <Route path="/siteusing" element={<UseOfTheSite />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFoundPage/> } />
             </Routes>
         </BrowserRouter>
     )

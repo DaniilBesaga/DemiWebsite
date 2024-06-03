@@ -33,3 +33,7 @@
     grid-template-columns:repeat(3, 1fr);
     gap:20px;
 }
+
+.trailers-container .grid-3 img{
+    height:250px;
+}

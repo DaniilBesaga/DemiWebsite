@@ -4,10 +4,10 @@
 
 .slide-show div:first-of-type {
     background-image: url("https://profirealt.blob.core.windows.net/commerce/spyfamily.webp");
-    padding-top: 35.1875%;
+    padding-top: 55.1875%;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: contain; /*100% 100%*/
+    background-size: 100% 100%; /*100% 100%*/
     background-position: center;
     transition: all .3s ease;
 }
@@ -17,7 +17,7 @@
     font-size: 40px;
     cursor: pointer;
     z-index: 1000;
-    top: 50%;
+    top: 70%;
 }
 
 .slide-show i:first-of-type{
