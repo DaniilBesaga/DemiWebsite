@@ -1,16 +1,16 @@
 .news-preview {
     position:relative;
-    display: flex;
     padding: 40px 0;
     gap: 15px;
     width:70%;
     border-bottom: 1px solid black;
-    
 }
 
 .news-preview a{
     cursor:pointer;
     color:#fc035a;
+    border:0;
+    display:inline-block;
 }
 
 .news-p-img {
@@ -29,7 +29,11 @@
 }
 
 .news-p-info{
-    width:65%;
+    width:55%;
+    display:inline-block;
+    position:absolute;
+    top:50px;
+    margin-left:80px;
 }
 
 .news-p-info a:hover {
@@ -53,7 +57,9 @@
 .date {
     font-size: .7em;
     opacity: .5;
-    
+    position: absolute;
+    top: 50px;
+    margin-left:10px;
 }
 
 .news-preview .a-button{

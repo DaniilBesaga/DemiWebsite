@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 function NewsPreview() {
 
     const [news, setNews] = useState<NewsItem[]>([]);
-    console.log(window.location.pathname.split('-')[1])
     useEffect(() => {
         (async () => {
             
@@ -30,11 +29,12 @@ function NewsPreview() {
                         </Link>
                         <span className="date">{item.postDate?.toString().substring(0, 10)}</span>
                         <div className="news-p-info">
-                            <h3><Link to={"" + (key + 1)}>{item.name}</Link></h3>
+                            <h3><Link to={"/news/byid/" + (key + 1)}>{item.name}</Link></h3>
                             <p>{item.description}</p>
-                            <Link to={"" + (key + 1)} className="a-button">Find out more</Link>
+                            
                         </div>
                     </div>
+                    <Link to={"" + (key + 1)} className="a-button">Find out more</Link>
                 </div>
             ))}
             {news.length == 0 && <p className="empty">Nothing has been found</p>}
