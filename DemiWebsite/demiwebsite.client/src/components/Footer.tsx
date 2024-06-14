@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styles/Footer.css';
 import '../styles/Shared.css';
 import { Link } from 'react-router-dom';

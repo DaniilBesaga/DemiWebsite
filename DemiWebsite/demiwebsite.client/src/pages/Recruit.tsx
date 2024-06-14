@@ -4,6 +4,7 @@ import RecruitItem from '../components/RecruitItem';
 import '../styles/Recruit.css';
 
 function Recruit() {
+    
     return (
         <div>
             <Header />

@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
 import '../styles/RecruitItem.css';
 import '../styles/Shared.css';
 
 
-function RecruitItem(url) {
-    console.log(url)
+function RecruitItem(url: { url: any; }) {
     return (
         <div className="recruit-item" style={{ backgroundImage:`url(${url.url})` }}>
             <h2>Regular recruitment and internships</h2>

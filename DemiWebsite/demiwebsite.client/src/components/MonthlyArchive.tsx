@@ -1,21 +1,14 @@
 import { useState } from 'react';
 import '../styles/MonthlyArchive.css';
 import '../styles/Shared.css';
-import { Link } from 'react-router-dom';
-
 
 function MonthlyArchive() {
 
     const [showList, setShowList] = useState(false);
-    const [changeMonth, setChangeMonth] = useState(0);
-    const [showMonth, setShowMonth] = useState(false);
+    const [changeMonth] = useState(0);
+    const [showMonth] = useState(false);
     const year = new Date().getFullYear();
 
-    const handleHover = (month: number) => {
-        setChangeMonth(month + 1);
-        setShowMonth(true);
-    }
-   
     return (
         <div>
             <span className={showMonth ? "url-title url-show" : "url-title"}>{window.location.hostname + `/news/${year}-0${changeMonth + 1}`}</span>
