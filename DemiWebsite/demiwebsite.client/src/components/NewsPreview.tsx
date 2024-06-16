@@ -22,19 +22,19 @@ function NewsPreview() {
     return (
         <div>
             {news.length > 0 && news.map((item, key) => (
-                <div className="news-preview">
+                <div className="news-preview" key={key}>
                     <div>
-                        <Link to={"" + (key + 1)} className="news-p-img">
+                        <Link to={"" + (item.id)} className="news-p-img">
                             <img src={item.imgUrl} />
                         </Link>
                         <span className="date">{item.postDate?.toString().substring(0, 10)}</span>
                         <div className="news-p-info">
-                            <h3><Link to={"/news/byid/" + (key + 1)}>{item.name}</Link></h3>
+                            <h3><Link to={"/news/byid/" + (item.id)}>{item.name}</Link></h3>
                             <p>{item.description}</p>
                             
                         </div>
                     </div>
-                    <Link to={"" + (key + 1)} className="a-button">Find out more</Link>
+                    <Link to={"/news/byid/" + (item.id)} className="a-button">Find out more</Link>
                 </div>
             ))}
             {news.length == 0 && <p className="empty">Nothing has been found</p>}
